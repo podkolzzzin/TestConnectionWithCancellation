@@ -1,0 +1,35 @@
+﻿<Window x:Class="TestConnection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestConnection"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="180" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"  Grid.Row="0" Grid.Column="0">Host:</TextBlock>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"  Grid.Row="1" Grid.Column="0">User:</TextBlock>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"  Grid.Row="2" Grid.Column="0">Password:</TextBlock>
+        <TextBox x:Name="XHost" VerticalAlignment="Center" Margin="5" Grid.Row="0" Grid.Column="1" />
+        <TextBox x:Name="XUser" VerticalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="1" />
+        <PasswordBox x:Name="XPassword" VerticalAlignment="Center" Margin="5" Grid.Row="2" Grid.Column="1" />
+        <Grid Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Click="XConnect_OnClick" x:Name="XConnect" Background="Lime">Connect</Button>
+            <Button Click="XCancel_OnClick" x:Name="XCancel" Grid.Column="1" Background="Red" IsEnabled="False">Cancel</Button>
+        </Grid>
+    </Grid>
+</Window>
